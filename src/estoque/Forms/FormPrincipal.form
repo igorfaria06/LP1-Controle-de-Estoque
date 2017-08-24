@@ -4,64 +4,64 @@
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="mPrincipal">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="mCadastros">
+        <Menu class="javax.swing.JMenu" name="menuCadastros">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cadastro"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="miProduto">
+            <MenuItem class="javax.swing.JMenuItem" name="menuCadastroProduto">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Produto"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miProdutoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuCadastroProdutoActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="miFornecedor">
+            <MenuItem class="javax.swing.JMenuItem" name="menuCadastroFornecedor">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fornecedor"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="miTransportadora">
+            <MenuItem class="javax.swing.JMenuItem" name="menuCadastroTransportadora">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Transportadora"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="miLoja">
+            <MenuItem class="javax.swing.JMenuItem" name="menuCadastroLoja">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Loja"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="miCategoria">
+            <MenuItem class="javax.swing.JMenuItem" name="menuCadastroCategoria">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Categoria"/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="mEstoque">
+        <Menu class="javax.swing.JMenu" name="menuEstoque">
           <Properties>
             <Property name="text" type="java.lang.String" value="Estoque"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="miEntrada">
+            <MenuItem class="javax.swing.JMenuItem" name="menuEstoqueEntrada">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Entrada"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="miSaida">
+            <MenuItem class="javax.swing.JMenuItem" name="menuEstoqueSaida">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sa&#xed;da"/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="mAjuda">
+        <Menu class="javax.swing.JMenu" name="menuAjuda">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ajuda"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="imAjuda">
+            <MenuItem class="javax.swing.JMenuItem" name="menuAjudaAjuda">
               <Properties>
                 <Property name="text" type="java.lang.String" value="miAjuda"/>
               </Properties>

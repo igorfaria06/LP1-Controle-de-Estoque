@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package estoque.Pages;
+package estoque.Forms;
+
+import javax.swing.JDialog;
+import javax.swing.WindowConstants;
 
 /**
  *
  * @author Not
  */
-public class Principal extends javax.swing.JFrame {
+public class FormPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public FormPrincipal() {
         initComponents();
     }
 
@@ -29,17 +32,17 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         mPrincipal = new javax.swing.JMenuBar();
-        mCadastros = new javax.swing.JMenu();
-        miProduto = new javax.swing.JMenuItem();
-        miFornecedor = new javax.swing.JMenuItem();
-        miTransportadora = new javax.swing.JMenuItem();
-        miLoja = new javax.swing.JMenuItem();
-        miCategoria = new javax.swing.JMenuItem();
-        mEstoque = new javax.swing.JMenu();
-        miEntrada = new javax.swing.JMenuItem();
-        miSaida = new javax.swing.JMenuItem();
-        mAjuda = new javax.swing.JMenu();
-        imAjuda = new javax.swing.JMenuItem();
+        menuCadastros = new javax.swing.JMenu();
+        menuCadastroProduto = new javax.swing.JMenuItem();
+        menuCadastroFornecedor = new javax.swing.JMenuItem();
+        menuCadastroTransportadora = new javax.swing.JMenuItem();
+        menuCadastroLoja = new javax.swing.JMenuItem();
+        menuCadastroCategoria = new javax.swing.JMenuItem();
+        menuEstoque = new javax.swing.JMenu();
+        menuEstoqueEntrada = new javax.swing.JMenuItem();
+        menuEstoqueSaida = new javax.swing.JMenuItem();
+        menuAjuda = new javax.swing.JMenu();
+        menuAjudaAjuda = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,46 +57,46 @@ public class Principal extends javax.swing.JFrame {
             .addGap(0, 311, Short.MAX_VALUE)
         );
 
-        mCadastros.setText("Cadastro");
+        menuCadastros.setText("Cadastro");
 
-        miProduto.setText("Produto");
-        miProduto.addActionListener(new java.awt.event.ActionListener() {
+        menuCadastroProduto.setText("Produto");
+        menuCadastroProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                miProdutoActionPerformed(evt);
+                menuCadastroProdutoActionPerformed(evt);
             }
         });
-        mCadastros.add(miProduto);
+        menuCadastros.add(menuCadastroProduto);
 
-        miFornecedor.setText("Fornecedor");
-        mCadastros.add(miFornecedor);
+        menuCadastroFornecedor.setText("Fornecedor");
+        menuCadastros.add(menuCadastroFornecedor);
 
-        miTransportadora.setText("Transportadora");
-        mCadastros.add(miTransportadora);
+        menuCadastroTransportadora.setText("Transportadora");
+        menuCadastros.add(menuCadastroTransportadora);
 
-        miLoja.setText("Loja");
-        mCadastros.add(miLoja);
+        menuCadastroLoja.setText("Loja");
+        menuCadastros.add(menuCadastroLoja);
 
-        miCategoria.setText("Categoria");
-        mCadastros.add(miCategoria);
+        menuCadastroCategoria.setText("Categoria");
+        menuCadastros.add(menuCadastroCategoria);
 
-        mPrincipal.add(mCadastros);
+        mPrincipal.add(menuCadastros);
 
-        mEstoque.setText("Estoque");
+        menuEstoque.setText("Estoque");
 
-        miEntrada.setText("Entrada");
-        mEstoque.add(miEntrada);
+        menuEstoqueEntrada.setText("Entrada");
+        menuEstoque.add(menuEstoqueEntrada);
 
-        miSaida.setText("Saída");
-        mEstoque.add(miSaida);
+        menuEstoqueSaida.setText("Saída");
+        menuEstoque.add(menuEstoqueSaida);
 
-        mPrincipal.add(mEstoque);
+        mPrincipal.add(menuEstoque);
 
-        mAjuda.setText("Ajuda");
+        menuAjuda.setText("Ajuda");
 
-        imAjuda.setText("miAjuda");
-        mAjuda.add(imAjuda);
+        menuAjudaAjuda.setText("miAjuda");
+        menuAjuda.add(menuAjudaAjuda);
 
-        mPrincipal.add(mAjuda);
+        mPrincipal.add(menuAjuda);
 
         setJMenuBar(mPrincipal);
 
@@ -115,9 +118,16 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void miProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miProdutoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_miProdutoActionPerformed
+    private void menuCadastroProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroProdutoActionPerformed
+        FormProduto form = new FormProduto(this, true);
+        form.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        form.setTitle("Cadastro de Produtos");
+        form.setLocationRelativeTo(null);
+        form.setResizable(true);
+        form.setVisible(true);
+
+
+    }//GEN-LAST:event_menuCadastroProdutoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,37 +146,38 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                new FormPrincipal().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem imAjuda;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JMenu mAjuda;
-    private javax.swing.JMenu mCadastros;
-    private javax.swing.JMenu mEstoque;
     private javax.swing.JMenuBar mPrincipal;
-    private javax.swing.JMenuItem miCategoria;
-    private javax.swing.JMenuItem miEntrada;
-    private javax.swing.JMenuItem miFornecedor;
-    private javax.swing.JMenuItem miLoja;
-    private javax.swing.JMenuItem miProduto;
-    private javax.swing.JMenuItem miSaida;
-    private javax.swing.JMenuItem miTransportadora;
+    private javax.swing.JMenu menuAjuda;
+    private javax.swing.JMenuItem menuAjudaAjuda;
+    private javax.swing.JMenuItem menuCadastroCategoria;
+    private javax.swing.JMenuItem menuCadastroFornecedor;
+    private javax.swing.JMenuItem menuCadastroLoja;
+    private javax.swing.JMenuItem menuCadastroProduto;
+    private javax.swing.JMenuItem menuCadastroTransportadora;
+    private javax.swing.JMenu menuCadastros;
+    private javax.swing.JMenu menuEstoque;
+    private javax.swing.JMenuItem menuEstoqueEntrada;
+    private javax.swing.JMenuItem menuEstoqueSaida;
     // End of variables declaration//GEN-END:variables
 }
